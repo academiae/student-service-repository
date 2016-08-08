@@ -3,23 +3,20 @@
 /**
  * The Service Manager component can be configured by passing an associative array to the component's constructor.
  *
- * @see https://zendframework.github.io/zend-servicemanager/configuring-the-service-manager/
+ * @see https://docs.zendframework.com/zend-servicemanager/configuring-the-service-manager/
  */
 
-use CodingMatters\Employee\Service;
-use CodingMatters\Employee\Model;
-use CodingMatters\Employee\Factory;
+use Academiae\Student\Factory\Repository\Masterlist as MasterListFactory;
+use Academiae\Student\Repository\Masterlist as MasterListRepository;
 
 return [
     'aliases'               => [
-        Model\EmployeeRepositoryInterface::class    => Model\EmployeeRepository::class,
-        Service\EmployeeListServiceInterface::class => Service\EmployeeListService::class
+        MasterListRepository\RepositoryInterface::class    => MasterListRepository\DummyRepository::class,       
+    ],
+    'factories'            => [
+        MasterListRepository\DummyRepository::class   => MasterListFactory\MasterListRepositoryFactory::class
     ],
     'invokables'            => [],
-    'factories'             => [
-        Model\EmployeeRepository::class     => Factory\EmployeeRepositoryFactory::class,
-        Service\EmployeeListService::class  => Factory\EmployeeListServiceFactory::class
-    ],
     'services'              => [],
     'abstract_factories'    => [],
     'delegators'            => [],
