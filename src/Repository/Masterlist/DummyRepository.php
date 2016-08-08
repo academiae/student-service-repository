@@ -26,22 +26,148 @@
 
 namespace Academiae\Student\Repository\Masterlist;
 
-use ArrayObject;
-use Zend\Db\ResultSet\ResultSet;
-
 final class DummyRepository implements RepositoryInterface
 {
     private $data = [
         [
-            'first_name'    => "Gab",
-            'middle_name'   => "A",
-            'last_name'     => "Amba"
-        ]
+            'id'                    => '2005-1729',
+            'first_name'            => 'Gabriel Nemesio',
+            'middle_name'           => 'Achay',
+            'last_name'             => 'Amba',
+            'gender'                => 'Male',
+            'date_of_birth'         => 'May 25, 1988',
+            'civil_status'          => 'Single',
+            'nationality'           => 'Filipino',
+            'home_address'          => [
+                'street'    => 'Purok 2',
+                'barangay'  => 'Luinab',
+                'city'      => 'Iligan City',
+                'district'  => 'Lone',
+                'province'  => 'Lanao del Norte'
+            ],
+            'contact_information'   => [
+                'email'     => 'gamba@gabbydgab.com',
+                'mobile'    => '09369501718',
+                'telephone' => '228-0321',
+                'facebook'  => '',
+                'twitter'   => '',
+                'instagram' => ''
+            ],
+            'scholarship'           => '',
+            'graduate'              => true
+        ],
+        [
+            'id'                    => '2016-1729',
+            'first_name'            => 'Gabby',
+            'middle_name'           => 'Achay',
+            'last_name'             => 'Amba',
+            'gender'                => 'Male',
+            'date_of_birth'         => 'May 25, 1988',
+            'civil_status'          => 'Single',
+            'nationality'           => 'Filipino',
+            'home_address'          => [
+                'street'    => 'Purok 2',
+                'barangay'  => 'Luinab',
+                'city'      => 'Iligan City',
+                'district'  => 'Lone',
+                'province'  => 'Lanao del Norte'
+            ],
+            'contact_information'   => [
+                'email'     => 'gamba@gabbydgab.com',
+                'mobile'    => '09369501718',
+                'telephone' => '228-0321',
+                'facebook'  => '',
+                'twitter'   => '',
+                'instagram' => ''
+            ],
+            'scholarship'           => "Mayors' Scholar",
+            'graduate'              => false
+        ],
+        [
+            'id'                    => '2007-1729',
+            'first_name'            => 'Gabby',
+            'middle_name'           => 'Achay',
+            'last_name'             => 'Amba',
+            'gender'                => 'Male',
+            'date_of_birth'         => 'May 25, 1988',
+            'civil_status'          => 'Single',
+            'nationality'           => 'Filipino',
+            'home_address'          => [
+                'street'    => 'Purok 2',
+                'barangay'  => 'Luinab',
+                'city'      => 'Iligan City',
+                'district'  => 'Lone',
+                'province'  => 'Lanao del Norte'
+            ],
+            'contact_information'   => [
+                'email'     => 'gamba@gabbydgab.com',
+                'mobile'    => '09369501718',
+                'telephone' => '228-0321',
+                'facebook'  => '',
+                'twitter'   => '',
+                'instagram' => ''
+            ],
+            'scholarship'           => "Mayors' Scholar",
+            'graduate'              => true
+        ],
+        [
+            'id'                    => '2014-1729',
+            'first_name'            => 'Gabby',
+            'middle_name'           => 'Achay',
+            'last_name'             => 'Amba',
+            'gender'                => 'Male',
+            'date_of_birth'         => 'May 25, 1988',
+            'civil_status'          => 'Single',
+            'nationality'           => 'Filipino',
+            'home_address'          => [
+                'street'    => 'Purok 2',
+                'barangay'  => 'Luinab',
+                'city'      => 'Iligan City',
+                'district'  => 'Lone',
+                'province'  => 'Lanao del Norte'
+            ],
+            'contact_information'   => [
+                'email'     => 'gamba@gabbydgab.com',
+                'mobile'    => '09369501718',
+                'telephone' => '228-0321',
+                'facebook'  => '',
+                'twitter'   => '',
+                'instagram' => ''
+            ],
+            'scholarship'           => "Mayors' Scholar",
+            'graduate'              => false
+        ],
+        [
+            'id'                    => '2011-1729',
+            'first_name'            => 'Gabby',
+            'middle_name'           => 'Achay',
+            'last_name'             => 'Amba',
+            'gender'                => 'Male',
+            'date_of_birth'         => 'May 25, 1988',
+            'civil_status'          => 'Single',
+            'nationality'           => 'Filipino',
+            'home_address'          => [
+                'street'    => 'Purok 2',
+                'barangay'  => 'Luinab',
+                'city'      => 'Iligan City',
+                'district'  => 'Lone',
+                'province'  => 'Lanao del Norte'
+            ],
+            'contact_information'   => [
+                'email'     => 'gamba@gabbydgab.com',
+                'mobile'    => '09369501718',
+                'telephone' => '228-0321',
+                'facebook'  => '',
+                'twitter'   => '',
+                'instagram' => ''
+            ],
+            'scholarship'           => "Mayors' Scholar",
+            'graduate'              => false
+        ],
     ];
 
-    public function fullList()
+    public function fetchAll()
     {
-
         return $this->data;
     }
 

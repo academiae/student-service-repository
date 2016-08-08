@@ -28,7 +28,7 @@ namespace Academiae\Student\Repository\Masterlist;
 
 interface RepositoryInterface
 {
-    public function fullList();
+    public function fetchAll();
 
     public function getById($id);
 
