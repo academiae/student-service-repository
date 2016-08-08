@@ -27,14 +27,25 @@
 namespace AcademiaeTest\Student\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Academiae\Student\Module;
 
 class ModuleConfigTest extends TestCase
 {
     /**
      * @test
+     * @dataProvider configKeys
      */
-    public function validateConfiguration()
+    public function moduleHasFollowingConfigKeys($key)
     {
-        $this->markTestIncomplete('This test has not been implemented yet.');
+        $module = new Module();
+        $this->assertArrayHasKey($key, $module->getConfig());
+    }
+    
+    public function configKeys()
+    {
+        return [
+            'service_manager'       => ['service_manager'],            
+            'middleware_pipeline'   => ['middleware_pipeline']
+        ];
     }
 }
