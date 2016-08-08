@@ -26,11 +26,23 @@
 
 namespace Academiae\Student\Repository\Masterlist;
 
-final class DummyRepository implements MasterListRepositoryInterface
+use ArrayObject;
+use Zend\Db\ResultSet\ResultSet;
+
+final class DummyRepository implements RepositoryInterface
 {
+    private $data = [
+        [
+            'first_name'    => "Gab",
+            'middle_name'   => "A",
+            'last_name'     => "Amba"
+        ]
+    ];
+
     public function fullList()
     {
-        return [];
+
+        return $this->data;
     }
 
     public function getById($id)
